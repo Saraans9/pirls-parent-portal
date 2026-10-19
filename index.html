@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <title>مدرسة الطليعة | PIRLS 2026</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="school" id="school">مدرسة الطليعة | Al Talea School</div>
+    <button type="button" class="lang" id="langButton">English</button>
+  </header>
+  <main>
+    <section class="panel" aria-labelledby="pageTitle">
+      <div class="eyebrow">PIRLS • 2026</div>
+      <div class="symbol" aria-hidden="true">📄</div>
+      <h1 id="pageTitle">تحميل استبانة ولي الأمر</h1>
+      <p id="intro">يرجى إدخال رقم هوية الطالبة ورمز الوصول الذي تم إرساله من المدرسة لتحميل الاستبانة الخاصة بها.</p>
+      <form id="downloadForm" autocomplete="off">
+        <div class="field">
+          <label for="eid" id="eidLabel">رقم الهوية الإماراتية للطالبة (15 رقمًا)</label>
+          <input id="eid" name="eid" type="text" inputmode="numeric" pattern="[0-9]{15}" maxlength="15" placeholder="784XXXXXXXXXXXX" dir="ltr" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="secret" id="secretLabel">رمز الوصول الخاص</label>
+          <input id="secret" name="secret" type="text" maxlength="40" placeholder="XXXX-XXXX-XXXX-XXXX" dir="ltr" required autocomplete="off" autocapitalize="characters" spellcheck="false">
+        </div>
+        <button id="downloadButton" class="primary" type="submit">تنزيل ملف PDF</button>
+      </form>
+      <p id="status" role="status" aria-live="polite" class="status" hidden></p>
+      <aside id="note" class="note">لحماية خصوصية الطالبات، يستخدم الموقع رقم الهوية ورمز وصول خاص. لا تشاركي الرمز مع الآخرين.</aside>
+    </section>
+  </main>
+  <footer id="footer">مدرسة الطليعة · PIRLS 2026</footer>
+</body>
+</html>

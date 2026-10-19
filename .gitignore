@@ -1,0 +1,5 @@
+# Prevent accidentally checking original student files into a repository via Git clients.
+*.pdf
+*.csv
+*.zip
+*PRIVATE*
