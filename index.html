@@ -1,40 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="referrer" content="no-referrer">
-  <meta name="robots" content="noindex,nofollow">
-  <title>مدرسة الطليعة | PIRLS 2026</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script defer src="./script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#103f49" />
+  <title>استبانة ولي الأمر | PIRLS 2026 — مدرسة الطليعة</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  <header class="top">
-    <div class="school" id="school">مدرسة الطليعة | Al Talea School</div>
-    <button type="button" class="lang" id="langButton">English</button>
+  <div class="topline"></div>
+  <header class="header wrap">
+    <a class="brand" href="./" aria-label="PIRLS 2026">
+      <span class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 9C15 4 9 7 6 9v27c5-3 12-2 18 2 6-4 13-5 18-2V9c-3-2-9-5-18 0Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M24 10v28M12 15c3-1 6 0 8 1m8 0c3-2 6-2 9-1M12 22c3-1 6 0 8 1m8 0c3-2 6-2 9-1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span><strong id="schoolText">مدرسة الطليعة</strong><small>AL TALEA SCHOOL</small></span>
+    </a>
+    <button class="language" type="button" id="languageButton" aria-label="Change language">English <span aria-hidden="true">↗</span></button>
   </header>
-  <main>
-    <section class="panel" aria-labelledby="pageTitle">
-      <div class="eyebrow">PIRLS • 2026</div>
-      <div class="symbol" aria-hidden="true">📄</div>
-      <h1 id="pageTitle">تحميل استبانة ولي الأمر</h1>
-      <p id="intro">يرجى إدخال رقم هوية الطالبة ورمز الوصول الذي تم إرساله من المدرسة لتحميل الاستبانة الخاصة بها.</p>
-      <form id="downloadForm" autocomplete="off">
-        <div class="field">
-          <label for="eid" id="eidLabel">رقم الهوية الإماراتية للطالبة (15 رقمًا)</label>
-          <input id="eid" name="eid" type="text" inputmode="numeric" pattern="[0-9]{15}" maxlength="15" placeholder="784XXXXXXXXXXXX" dir="ltr" required autocomplete="off">
+
+  <main class="main wrap">
+    <section class="intro">
+      <div class="eyebrow"><span class="dot"></span> PIRLS 2026 <span class="thin">/</span> IEA</div>
+      <h1 id="heroTitle">استبانة التعلّم المبكر<br><em>لأولياء الأمور</em></h1>
+      <p id="heroDescription">لتحميل استبانة ابنتكم الخاصة بدراسة PIRLS 2026، يُرجى إدخال رقم الهوية الإماراتية للطالبة.</p>
+      <div class="info-strip">
+        <div class="info-item"><span aria-hidden="true">✦</span><span id="infoOne">استبانة خاصة بكل طالبة</span></div>
+        <div class="info-item"><span aria-hidden="true">✦</span><span id="infoTwo">تنزيل مباشر بصيغة PDF</span></div>
+      </div>
+    </section>
+
+    <section class="form-card" aria-labelledby="formHeading">
+      <div class="card-label"><span class="step">01</span><span id="cardLabel">الوصول إلى المستند</span></div>
+      <h2 id="formHeading">تحميل الاستبانة</h2>
+      <p class="card-description" id="formDescription">اكتبي رقم الهوية الإماراتية للطالبة المكوّن من 15 رقمًا.</p>
+      <form id="downloadForm" novalidate autocomplete="off">
+        <label class="input-label" id="idLabel" for="emiratesId">رقم الهوية الإماراتية</label>
+        <div class="input-holder">
+          <span class="input-symbol" aria-hidden="true">#</span>
+          <input type="text" id="emiratesId" name="emiratesId" inputmode="numeric" maxlength="19" placeholder="784 •••• ••••••• •" autocapitalize="off" autocomplete="off" spellcheck="false" dir="ltr" aria-describedby="fieldHint" required />
         </div>
-        <div class="field">
-          <label for="secret" id="secretLabel">رمز الوصول الخاص</label>
-          <input id="secret" name="secret" type="text" maxlength="40" placeholder="XXXX-XXXX-XXXX-XXXX" dir="ltr" required autocomplete="off" autocapitalize="characters" spellcheck="false">
-        </div>
-        <button id="downloadButton" class="primary" type="submit">تنزيل ملف PDF</button>
+        <p class="hint" id="fieldHint">يرجى إدخال 15 رقمًا دون الحاجة إلى رمز دخول إضافي.</p>
+        <button class="download" type="submit" id="downloadButton">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3"/></svg>
+          <span id="buttonText">تحميل ملف PDF</span>
+        </button>
       </form>
-      <p id="status" role="status" aria-live="polite" class="status" hidden></p>
-      <aside id="note" class="note">لحماية خصوصية الطالبات، يستخدم الموقع رقم الهوية ورمز وصول خاص. لا تشاركي الرمز مع الآخرين.</aside>
+      <div class="status" id="status" role="status" aria-live="polite" hidden></div>
+      <div class="help-note">
+        <span class="help-icon" aria-hidden="true">i</span>
+        <p id="helpText">هذا المستند مخصّص لولي أمر الطالبة فقط. يرجى عدم مشاركته مع الآخرين.</p>
+      </div>
     </section>
   </main>
-  <footer id="footer">مدرسة الطليعة · PIRLS 2026</footer>
+
+  <footer class="footer wrap">
+    <span id="footerText">مدرسة الطليعة · 2026</span>
+    <span>PIRLS — Progress in International Reading Literacy Study</span>
+  </footer>
 </body>
 </html>
